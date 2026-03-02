@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
+ 
+ 
 package Validation;
 
 import models.Column;
@@ -11,10 +9,8 @@ import models.Row;
 import models.Schema;
 import models.Table;
 
-/**
- *
- * @author ברכי
- */
+
+
 public class SchemaMatchValidator implements Validator {
 
     String tableName;
@@ -93,18 +89,3 @@ for (String key : row.getValues().keySet()) {
         throw new IllegalArgumentException("Column " + key + " does not exist in schema");
     }
 }}}
-=======
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Validation;
-
-/**
- *
- * @author ברכי
- */
-public class SchemaMatchValidator {
-    
-}
->>>>>>> b39a39f4f9dbff9015e3c129f1a5b002b5cf5e5c

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Validation;
 import Condition.Operator;
 import models.Row;
@@ -22,6 +18,7 @@ public class ConditionValidator implements Validator {
         this.value = value;
         this.row = row;
     }
+
     public void validator() {
 Object rowValue = row.getValue(column);
    if (row.getValue(column) == null) {
@@ -36,18 +33,3 @@ Object rowValue = row.getValue(column);
 
     
 }
-=======
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package Validation;
-
-/**
- *
- * @author ברכי
- */
-public class ConditionValidator {
-    
-}
->>>>>>> b39a39f4f9dbff9015e3c129f1a5b002b5cf5e5c

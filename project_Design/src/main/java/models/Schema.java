@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 package models;
 
 import java.util.List;
@@ -31,31 +31,3 @@ public class Schema {
      * DataType). This is the runtime check used by the validator.
      */
     
-=======
-package models;
-
-import java.util.List;
-
-public class Schema {
-
-    private final List<Column> columns = new java.util.ArrayList<>();
-
-    public java.util.List<Column> getColumns() {
-        return columns;
-    }
-
-    public void addColumn(Column column) {
-        columns.add(column);
-        System.out.println("Column " + column.getName() + " was added to schema");
-    }
-
-    public void removeColumn(String columnName) {
-        boolean removed = columns.removeIf(column -> column.getName().equals(columnName));
-        if (removed) {
-            System.out.println("Column " + columnName + " was removed from schema");
-        } else {
-            System.out.println("Column " + columnName + " not found in schema");
-        }
-    }
-}
->>>>>>> b39a39f4f9dbff9015e3c129f1a5b002b5cf5e5c
