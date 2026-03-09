@@ -1,6 +1,6 @@
 # In-Memory Data Engine - Design Patterns Project
 
-A comprehensive Java-based in-memory database management system demonstrating the practical implementation of **6 Design Patterns** from all three GoF categories (Creational, Structural, and Behavioral).
+A comprehensive Java-based in-memory database management system demonstrating the practical implementation of **7 Design Patterns** from all three GoF categories (Creational, Structural, and Behavioral).
 
 ## 📋 Table of Contents
 - [Overview](#overview)
@@ -30,7 +30,22 @@ This project implements a fully functional in-memory database engine that suppor
 
 ### **Creational Patterns**
 
-#### 1. **Builder Pattern**
+#### 1. **Singleton Pattern**
+- **Location:** `Logger/Informer.java`, `Logger/LogManager.java`, `Logger/WriterLogger.java`
+- **Purpose:** Ensures only one instance of critical system components exists
+- **Implementation:**
+  ```java
+  LogManager logger = LogManager.getInstance();
+  Informer informer = Informer.getInformer();
+  WriterLogger writer = WriterLogger.getLogger();
+  ```
+- **Benefits:**
+  - Controlled access to single instance
+  - Thread-safe implementation (synchronized)
+  - Lazy initialization
+  - Prevents multiple logger instances causing conflicts
+
+#### 2. **Builder Pattern**
 - **Location:** `builder/TableBuilder.java`
 - **Purpose:** Constructs complex Table objects step-by-step with a fluent API
 - **Implementation:**
@@ -43,7 +58,7 @@ This project implements a fully functional in-memory database engine that suppor
   - Provides clear and readable table creation process
   - Allows flexible table configuration
 
-#### 2. **Prototype Pattern (Clone)**
+#### 3. **Prototype Pattern (Clone)**
 - **Location:** `Clone/TableClone.java`, `models/Table.java`
 - **Purpose:** Creates deep copies of Table objects without depending on concrete classes
 - **Implementation:**
@@ -59,7 +74,7 @@ This project implements a fully functional in-memory database engine that suppor
 
 ### **Structural Patterns**
 
-#### 3. **Composite Pattern**
+#### 4. **Composite Pattern**
 - **Location:** `Condition/` package
 - **Purpose:** Builds hierarchical condition trees for complex queries
 - **Implementation:**
@@ -77,7 +92,7 @@ This project implements a fully functional in-memory database engine that suppor
 
 ### **Behavioral Patterns**
 
-#### 4. **Command Pattern**
+#### 5. **Command Pattern**
 - **Location:** `DataOperations/` package
 - **Purpose:** Encapsulates all database operations as objects with uniform execution flow
 - **Classes:**
@@ -94,7 +109,7 @@ This project implements a fully functional in-memory database engine that suppor
   - Easy to add new operations
   - Supports logging and undo functionality
 
-#### 5. **Observer Pattern**
+#### 6. **Observer Pattern**
 - **Location:** `Logger/` package
 - **Purpose:** Implements a reactive logging system that responds to data changes
 - **Components:**
@@ -114,7 +129,7 @@ This project implements a fully functional in-memory database engine that suppor
   - Easy to add new observers
   - Centralized event notification
 
-#### 6. **Strategy Pattern**
+#### 7. **Strategy Pattern**
 - **Location:** `Iteration/` package
 - **Purpose:** Allows dynamic selection of row iteration algorithms
 - **Strategies:**
